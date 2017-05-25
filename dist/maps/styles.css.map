@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AACA,YAAY,CAAC;EACT,KAAK,EAAE,GACV,GAAC","file":"../styles.css","sourcesContent":["\n.placeholder {\n    color: red\n}\n\n"]}
