@@ -5,31 +5,34 @@ angular.module('noserver', []);
 
 angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
 
-    var recQuotes = function recQuotes() {
-        mainSvc.getQuotes().then(function (response) {
-            $scope.recQuote = response.data.contents.quotes[0];
-            console.log($scope.recQuote);
+    /////////////////////////////////////////////////////////
+    //  QUOTE
+    /////////////////////////////////////////////////////////
+
+    // var recQuotes = function () {
+    //     mainSvc.getQuotes().then(function (response) {
+    //         $scope.recQuote = response.data.contents.quotes[0]
+    //         // console.log($scope.recQuote)
+    //     })
+    // }
+    // recQuotes()
+
+    /////////////////////////////////////////////////////////
+    //  TEMP
+    /////////////////////////////////////////////////////////
+
+    var recTemp = function recTemp() {
+        mainSvc.getTemp().then(function (response) {
+            $scope.forecast = response.data.forecast.simpleforecast.forecastday[0];
+            $scope.city = response.data.location.city;
+            console.log($scope.forecast);
         });
     };
-    recQuotes();
+    recTemp();
 
-    // var recPic = function(){
-    //     mainSvc.getPic().then(function(response){
-    //         $scope.recPic=response.data
-    //         console.log($scope.recPic)
-    //     })
-    // }
-    // recPic()
-
-    // var recTemp = function(){
-    //     mainSvc.getTemp().then(function(response){
-    //         $scope.recTemp=response
-    //         console.log($scope.recTemp)
-    //     })
-    // }
-    // recTemp()
-
-
+    /////////////////////////////////////////////////////////
+    //  TIME
+    /////////////////////////////////////////////////////////
     function checkTime(i) {
         if (i < 10) {
             i = "0" + i;
@@ -54,17 +57,17 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
 
 angular.module('noserver').service('mainSvc', function ($http) {
 
-    this.getQuotes = function () {
-        return $http.get('http://quotes.rest/qod.json');
+    // this.getQuotes=function(){
+    //     return $http.get('http://quotes.rest/qod.json')
+    // }
+
+
+    this.getPic = function () {
+        return $http.get('http://www.splashbase.co/api/v1/images/random');
     };
 
-    // this.getPic=function(){
-    //     return $http.get('http://www.splashbase.co/api/v1/images/random')
-    // }
-
-    // this.getTemp=function(){
-    //     return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/geolookup/forecast/hourly/q/autoip.json')
-    // }
-
+    this.getTemp = function () {
+        return $http.get('http://api.wunderground.com/api/97eb89c0721b402a/geolookup/forecast/hourly/q/autoip.json');
+    };
 });
 //# sourceMappingURL=bundle.js.map

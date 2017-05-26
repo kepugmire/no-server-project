@@ -1,30 +1,33 @@
 angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
 
+    /////////////////////////////////////////////////////////
+    //  QUOTE
+    /////////////////////////////////////////////////////////
 
+    // var recQuotes = function () {
+    //     mainSvc.getQuotes().then(function (response) {
+    //         $scope.recQuote = response.data.contents.quotes[0]
+    //         // console.log($scope.recQuote)
+    //     })
+    // }
+    // recQuotes()
 
-    var recQuotes = function () {
-        mainSvc.getQuotes().then(function (response) {
-            $scope.recQuote = response.data.contents.quotes[0]
-            console.log($scope.recQuote)
+    /////////////////////////////////////////////////////////
+    //  TEMP
+    /////////////////////////////////////////////////////////
+
+    var recTemp = function () {
+        mainSvc.getTemp().then(function (response) {
+            $scope.forecast = response.data.forecast.simpleforecast.forecastday[0];
+            $scope.city = response.data.location.city
+            console.log($scope.forecast)
         })
     }
-    recQuotes()
+    recTemp()
 
-    // var recPic = function(){
-    //     mainSvc.getPic().then(function(response){
-    //         $scope.recPic=response.data
-    //         console.log($scope.recPic)
-    //     })
-    // }
-    // recPic()
-
-    // var recTemp = function(){
-    //     mainSvc.getTemp().then(function(response){
-    //         $scope.recTemp=response
-    //         console.log($scope.recTemp)
-    //     })
-    // }
-    // recTemp()
+    /////////////////////////////////////////////////////////
+    //  TIME
+    /////////////////////////////////////////////////////////
 
 
     function checkTime(i) {
@@ -46,8 +49,6 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
         }, 500);
     }
     startTime();
-
-
 
 
 
