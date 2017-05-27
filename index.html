@@ -9,23 +9,52 @@
     <title>Document</title>
 </head>
 
-
-
-
 <body ng-controller="mainCtrl">
     <div class='background'>
 
+        <header>
+            <h1>MAIN BUTTON</h1>
+            <nav>THREE NAV BUTTONS</nav>
+            <nav>EXTENSION BUTTON</nav>
+        </header>
+
+        <div>CENTER-ABOVE-EMPTY</div>
+
+        <div>CENTER
+            <div>
+                <div id="time"></div>
+            </div>
+            <div>GREETING</div>
+        </div>
+
+        <div>CENTER-LOWER
+            <p>INFO?</p>
+            <p>MAYBE A BUTTON?</p>
+        </div>
+
+        <div>BOTTOM-EMPTY</div>
+
+        <div>BOTTOM-RIGHT
+            <nav>
+                <a href="">RANDOM</a>
+                <a href="https://www.facebook.com/KELSO.PUGMIRE">FACEBOOK</a>
+                <a href="https://github.com/kepugmire">GITHUB</a>
+            </nav>
+        </div>
+
+        <div>BOTTOM LEFT
+            <div>INFO BOX?</div>
+        </div>
 
         <h1>"{{recQuote.quote}}"</h1>
         <h1>-{{recQuote.author}}</h1>
         <br>
+        <h1>{{city}}</h1>
         <h1>{{forecast.high.fahrenheit}}</h1>
         <h1>{{forecast.conditions}}</h1>
         <img src="{{forecast.icon_url}}">
 
 
-
-        <div id="time"></div>
 
 
 

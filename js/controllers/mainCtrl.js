@@ -1,9 +1,9 @@
 angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
-
-    /////////////////////////////////////////////////////////
-    //  QUOTE
-    /////////////////////////////////////////////////////////
-
+    
+    /////////////
+    /*  QUOTE  */
+    /////////////
+    
     // var recQuotes = function () {
     //     mainSvc.getQuotes().then(function (response) {
     //         $scope.recQuote = response.data.contents.quotes[0]
@@ -12,9 +12,9 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
     // }
     // recQuotes()
 
-    /////////////////////////////////////////////////////////
-    //  TEMP
-    /////////////////////////////////////////////////////////
+    /////////////
+    /*  TEMP  */
+    /////////////
 
     var recTemp = function () {
         mainSvc.getTemp().then(function (response) {
@@ -25,11 +25,10 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
     }
     recTemp()
 
-    /////////////////////////////////////////////////////////
-    //  TIME
-    /////////////////////////////////////////////////////////
-
-
+    /////////////
+    /*  TIME */
+    /////////////
+    
     function checkTime(i) {
         if (i < 10) {
             i = "0" + i;
