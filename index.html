@@ -6,60 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dist/styles.css">
-    <title>Document</title>
+    <title>NO SERVER</title>
 </head>
 
 <body ng-controller="mainCtrl">
     <div class='background'>
 
-        <header>
-            <h1>MAIN BUTTON</h1>
-            <nav>THREE NAV BUTTONS</nav>
-            <nav>EXTENSION BUTTON</nav>
+        <header class="header">
+            <div class="top-left">
+                <a href="https://www.facebook.com/KELSO.PUGMIRE">
+                <img src="fb-icon.png" style="height: 50px; width: 50px;" >
+                </a>
+            </div>
+
+            <h1>{{city}}</h1>
+
+            <div class="top-right">
+                <h1>{{forecast.high.fahrenheit}}°</h1>
+                <img src="{{forecast.icon_url}}">
+            </div>
         </header>
 
-        <div>CENTER-ABOVE-EMPTY</div>
 
-        <div>CENTER
-            <div>
-                <div id="time"></div>
+        <div class="center-above">CENTER-ABOVE-EMPTY</div>
+
+
+        <div class="center">
+            <div class="clock" id="time"></div>
+            <br>
+            <div class="quote">
+                <p>"{{recQuote.quote}}This text is just a placeholder for my random quote API that isn't working"</p>
+                <p>-SomeBody LastName{{recQuote.author}}</p>
             </div>
-            <div>GREETING</div>
         </div>
 
-        <div>CENTER-LOWER
-            <p>INFO?</p>
-            <p>MAYBE A BUTTON?</p>
-        </div>
 
-        <div>BOTTOM-EMPTY</div>
+        <div class="bottom-empty">BOTTOM-EMPTY</div>
+
 
         <div>BOTTOM-RIGHT
-            <nav>
-                <a href="">RANDOM</a>
-                <a href="https://www.facebook.com/KELSO.PUGMIRE">FACEBOOK</a>
-                <a href="https://github.com/kepugmire">GITHUB</a>
-            </nav>
         </div>
+
 
         <div>BOTTOM LEFT
-            <div>INFO BOX?</div>
         </div>
-
-        <h1>"{{recQuote.quote}}"</h1>
-        <h1>-{{recQuote.author}}</h1>
-        <br>
-        <h1>{{city}}</h1>
-        <h1>{{forecast.high.fahrenheit}}</h1>
-        <h1>{{forecast.conditions}}</h1>
-        <img src="{{forecast.icon_url}}">
-
-
-
-
-
-
-
 
 
 

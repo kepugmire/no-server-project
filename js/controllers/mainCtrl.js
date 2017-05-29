@@ -4,13 +4,13 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
     /*  QUOTE  */
     /////////////
     
-    // var recQuotes = function () {
-    //     mainSvc.getQuotes().then(function (response) {
-    //         $scope.recQuote = response.data.contents.quotes[0]
-    //         // console.log($scope.recQuote)
-    //     })
-    // }
-    // recQuotes()
+    var recQuotes = function () {
+        mainSvc.getQuotes().then(function (response) {
+            $scope.recQuote = response.data.contents.quotes[0]
+            // console.log($scope.recQuote)
+        })
+    }
+    recQuotes()
 
     /////////////
     /*  TEMP  */
@@ -20,7 +20,6 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
         mainSvc.getTemp().then(function (response) {
             $scope.forecast = response.data.forecast.simpleforecast.forecastday[0];
             $scope.city = response.data.location.city
-            console.log($scope.forecast)
         })
     }
     recTemp()
@@ -28,7 +27,7 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
     /////////////
     /*  TIME */
     /////////////
-    
+
     function checkTime(i) {
         if (i < 10) {
             i = "0" + i;
