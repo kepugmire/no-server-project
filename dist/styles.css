@@ -89,6 +89,17 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
+img a:hover {
+  box-shadow: 0 1px 8px black; }
+
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset; }
+
 .background {
   background: url("/pic2.jpg") no-repeat center;
   background-size: cover;
@@ -120,6 +131,12 @@ body {
   align-items: center;
   justify-content: center; }
 
+.city {
+  font-family: helvetica;
+  font-size: 20px;
+  font-style: italic;
+  text-shadow: 0px 0px 30px gray; }
+
 .center-above {
   height: 25%;
   width: 100%;
@@ -141,8 +158,7 @@ body {
 
 .quote {
   height: 65px;
-  /*padding-top: 10px;*/
-  font-size: 17px;
+  font-size: 20px;
   text-shadow: 0px 0px 30px black;
   text-align: center;
   display: flex;

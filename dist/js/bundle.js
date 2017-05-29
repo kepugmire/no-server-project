@@ -12,7 +12,7 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
     var recQuotes = function recQuotes() {
         mainSvc.getQuotes().then(function (response) {
             $scope.recQuote = response.data.contents.quotes[0];
-            console.log($scope.recQuote);
+            // console.log($scope.recQuote)
         });
     };
     recQuotes();
@@ -55,7 +55,6 @@ angular.module('noserver').controller('mainCtrl', function ($scope, mainSvc) {
 
     var timeStamp = new Date();
     $scope.time = moment(timeStamp).format('h:mm');
-    console.log($scope.time);
 });
 'use strict';
 
