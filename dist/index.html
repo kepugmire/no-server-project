@@ -5,32 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/styles.292db2f8.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="dist/styles.9b81e451.css">
+    <title>NO SERVER</title>
 </head>
-
-
-
 
 <body ng-controller="mainCtrl">
     <div class='background'>
 
+        <header class="header">
+            <div class="top-left">
+                <a href="https://www.facebook.com/KELSO.PUGMIRE">
+                <img src="fb-icon.png" style="height: 50px; width: 50px;" >
+                </a>
+            </div>
 
-        <h1>"{{recQuote.quote}}"</h1>
-        <h1>-{{recQuote.author}}</h1>
-        <br>
-        <h1>{{forecast.high.fahrenheit}}</h1>
-        <h1>{{forecast.conditions}}</h1>
-        <img src="{{forecast.icon_url}}">
+            <h1>{{city}}</h1>
+
+            <div class="top-right">
+                <h1>{{forecast.high.fahrenheit}}°</h1>
+                <img src="{{forecast.icon_url}}">
+            </div>
+        </header>
 
 
-
-        <div id="time"></div>
-
+        <div class="center-above"></div>
 
 
+        <div class="center">
+            <div class="clock">{{time}}</div>
+            <br>
+            <div class="quote">
+                <p style="font-style: italic">"{{recQuote.quote}}"</p>
+                <br>
+                <p>-{{recQuote.author}}</p>
+            </div>
+        </div>
 
 
+        <div class="bottom-empty"></div>
+
+
+        <div class="bottom">
+            <div class="bottom-left">
+                <a href="http://www.cagealotcastle.com/">
+                    <img src="god-icon.png" style="height: 50px; width: 50px">
+                </a>
+            </div>
+            <div class="bottom-right">
+                <a href="https://www.instagram.com/annie.fam.cam/?hl=en">
+                <img src="eye-icon.png" style="height:50px; width: 50px">
+                </a>
+            </div>
+        </div>
 
 
 
@@ -39,6 +65,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="dist/js/bundle.js"></script>
 </body>
 

@@ -14,7 +14,7 @@ gulp.task('hello', function(){
 })
 
 gulp.task('build-css', function(){
-    return gulp.src('./styles/*')
+    return gulp.src('./styles/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(cachebust.resources())
